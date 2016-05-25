@@ -32,13 +32,13 @@ http://ngcordova.com/docs/install/
 $ bower install ngCordova
 ```
 
-# Include ng-cordova.js or ng-cordova.min.js in your index.html file before cordova.js and after your AngularJS / Ionic file (since ngCordova depends on AngularJS).
+#### Include ng-cordova.js or ng-cordova.min.js in your index.html file before cordova.js and after your AngularJS / Ionic file (since ngCordova depends on AngularJS).
 ```bash
 <script src="lib/ngCordova/dist/ng-cordova.js"></script>
 <script src="cordova.js"></script>
 ```
 
-# Inject as an Angular dependency
+#### Inject as an Angular dependency
 
 Then, include ngCordova as a dependency in your angular module:
 
@@ -46,7 +46,7 @@ Then, include ngCordova as a dependency in your angular module:
 angular.module('myApp', ['ngCordova'])
 ```
 
-## Install cordova plugin
+#### Install cordova plugin
 
 ImagePicker
 ```bash
