@@ -17,7 +17,7 @@ Then run:
 
 ```bash
 $ ionic setup sass
-$ bowser install
+$ bower install
 $ ionic platform add android
 $ ionic run android 
 ```
