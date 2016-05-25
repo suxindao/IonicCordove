@@ -148,6 +148,18 @@ angular.module('starter.controllers', [])
 
   })
 
+  .controller('SplashScreenCtrl', function ($scope, $cordovaSplashscreen) {
+
+    $scope.showSplashScreen = function () {
+
+      $cordovaSplashscreen.show();
+      
+      setTimeout(function () {
+        $cordovaSplashscreen.hide();
+      }, 5000);
+    };
+
+  })
 
   .controller('TestCtrl', function ($scope, $cordovaVibration) {
 

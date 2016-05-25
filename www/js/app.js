@@ -80,6 +80,11 @@ angular.module('starter', [
         controller: "SMSCtrl"
       })
 
+      .state('splashScreen', {
+        url: '/splashScreen',
+        templateUrl: 'templates/splashScreen.html',
+        controller: "SplashScreenCtrl"
+      })
 
 //      .state('about', {
 //        url: "/about",

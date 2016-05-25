@@ -75,3 +75,10 @@ SMS
 ```bash
 cordova plugin add https://github.com/cordova-sms/cordova-sms-plugin.git
 ```
+
+Splashscreen
+
+```bash
+cordova plugin add cordova-plugin-splashscreen
+```
+
