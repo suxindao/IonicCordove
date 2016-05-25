@@ -8,7 +8,6 @@ angular.module('starter.controllers', [])
 
   .controller('InAppBrowserCtrl', function ($scope, $rootScope, $cordovaInAppBrowser) {
     $scope.openBrowser = function () {
-      alert("bbb");
 
       document.addEventListener('deviceready', function () {
 
@@ -92,7 +91,7 @@ angular.module('starter.controllers', [])
     };
   })
 
-
+  //获取版本
   .controller('VersionCtrl', function ($scope, $cordovaAppVersion) {
 
     $scope.getVersionInfo = function () {
@@ -113,6 +112,38 @@ angular.module('starter.controllers', [])
         $scope.appPackage = package;
       }, false);
 
+    };
+
+  })
+
+  //发送短信
+  .controller('SMSCtrl', function ($scope, $cordovaSms) {
+
+    $scope.number = "13910657489";
+    $scope.message = "这是文本信息";
+
+    //CONFIGURATION
+    var options = {
+      replaceLineBreaks: false, // true to replace \n by a new line, false by default
+      android: {
+        intent: 'INTENT'  // send SMS with the native android SMS messaging
+          //intent: '' // send SMS without open any other app
+      }
+    };
+
+    $scope.sendSMS = function () {
+
+      document.addEventListener("deviceready", function () {
+
+        $cordovaSms
+          .send($scope.number, $scope.message, options)
+          .then(function () {
+            alert("发送成功");
+          }, function (error) {
+            alert("发送失败");
+          });
+
+      });
     };
 
   })

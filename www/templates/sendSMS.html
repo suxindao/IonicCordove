@@ -1,0 +1,21 @@
+<ion-view title="SMS">
+  <ion-content padding="true">
+    <h1 class="text-center">Send SMS</h1>
+
+    <div class="list">
+      <label class="item item-input">
+        <span class="input-label">Mobile Number</span>
+        <input id="numberTxt" placeholder="Enter mobile number" type="tel" ng-model="number"/>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Message</span>
+        <textarea id="messageTxt" placeholder="Enter message" ng-model="message"></textarea>
+      </label>
+      <button class="button button-block button-positive" ng-click="sendSMS()">
+        Send SMS
+      </button>
+    </div>
+
+
+  </ion-content>
+</ion-view>

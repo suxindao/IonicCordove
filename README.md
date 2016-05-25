@@ -70,4 +70,8 @@ AppVersion
 cordova plugin add https://github.com/whiteoctober/cordova-plugin-app-version.git
 ```
 
+SMS
 
+```bash
+cordova plugin add https://github.com/cordova-sms/cordova-sms-plugin.git
+```

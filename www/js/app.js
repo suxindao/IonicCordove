@@ -74,6 +74,12 @@ angular.module('starter', [
         controller: "VersionCtrl"
       })
 
+      .state('sendSMS', {
+        url: '/sendSMS',
+        templateUrl: 'templates/sendSMS.html',
+        controller: "SMSCtrl"
+      })
+
 
 //      .state('about', {
 //        url: "/about",
