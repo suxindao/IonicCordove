@@ -43,6 +43,7 @@ angular.module('starter.controllers', [])
 
   })
 
+  //获取本地图片
   .controller('ImagePickerCtrl', function ($scope, $rootScope, $cordovaImagePicker) {
     $scope.imagePicker = function () {
       var options = {
@@ -80,6 +81,7 @@ angular.module('starter.controllers', [])
 
   })
 
+  //震动效果
   .controller('VibrationCtrl', function ($scope, $cordovaVibration) {
 
     $scope.duration = 100;
@@ -87,5 +89,35 @@ angular.module('starter.controllers', [])
     $scope.vibrate = function () {
       console.log("vibrating");
       $cordovaVibration.vibrate($scope.duration);
-    }
+    };
+  })
+
+
+  .controller('VersionCtrl', function ($scope, $cordovaAppVersion) {
+
+    $scope.getVersionInfo = function () {
+
+      $cordovaAppVersion.getVersionNumber().then(function (version) {
+        $scope.appVersion = version;
+      }, false);
+
+      $cordovaAppVersion.getVersionCode().then(function (build) {
+        $scope.appBuild = build;
+      }, false);
+
+      $cordovaAppVersion.getAppName().then(function (name) {
+        $scope.appName = name;
+      }, false);
+
+      $cordovaAppVersion.getPackageName().then(function (package) {
+        $scope.appPackage = package;
+      }, false);
+
+    };
+
+  })
+
+
+  .controller('TestCtrl', function ($scope, $cordovaVibration) {
+
   });

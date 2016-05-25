@@ -48,6 +48,12 @@ angular.module('myApp', ['ngCordova'])
 
 #### Install cordova plugin
 
+In App Browser
+
+```bash
+cordova plugin add cordova-plugin-inappbrowser
+```
+
 ImagePicker
 ```bash
 cordova plugin add https://github.com/wymsee/cordova-imagePicker.git
@@ -57,4 +63,11 @@ Vibration
 ```bash
 cordova plugin add cordova-plugin-vibration
 ```
+
+AppVersion
+
+```bash
+cordova plugin add https://github.com/whiteoctober/cordova-plugin-app-version.git
+```
+
 

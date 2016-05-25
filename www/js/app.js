@@ -68,6 +68,13 @@ angular.module('starter', [
         controller: "VibrationCtrl"
       })
 
+      .state('version', {
+        url: '/version',
+        templateUrl: 'templates/version.html',
+        controller: "VersionCtrl"
+      })
+
+
 //      .state('about', {
 //        url: "/about",
 //        templateUrl: "app/about.html"
