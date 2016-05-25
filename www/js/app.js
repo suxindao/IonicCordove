@@ -27,7 +27,7 @@ angular.module('starter', [
     });
   })
 
-  .config(function ($stateProvider, $urlRouterProvider, $cordovaAppRateProvider, $cordovaInAppBrowserProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $cordovaInAppBrowserProvider) {
 
     if (!window.cordova) {
       var appID = 1234567890;
@@ -39,16 +39,6 @@ angular.module('starter', [
       location: "yes",
       toolbar: "yes"
     };
-
-
-    document.addEventListener("deviceready", function () {
-      var preferences = {
-        iosURL: "some URL",
-        appName: 'APP NAME',
-        language: 'fr'
-      };
-      $cordovaAppRateProvider.setPreferences(preferences);
-    }, false);
 
     $cordovaInAppBrowserProvider.setDefaultOptions(browserOptions);
 

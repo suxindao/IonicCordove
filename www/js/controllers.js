@@ -45,35 +45,36 @@ angular.module('starter.controllers', [])
 
   .controller('ImagePickerCtrl', function ($scope, $rootScope, $cordovaImagePicker) {
     $scope.imagePicker = function () {
-//      var options = {
-//        maximumImagesCount: 10,
-//        width: 800,
-//        height: 800,
-//        quality: 80
-//      };
-//
-//      $cordovaImagePicker.getPictures(options)
-//        .then(function (results) {
-//          for (var i = 0; i < results.length; i++) {
-//            console.log('Image URI: ' + results[i]);
-//          }
-//        }, function (error) {
-//          // error getting photos
-//        });
+      var options = {
+        maximumImagesCount: 10,
+        width: 800,
+        height: 800,
+        quality: 80
+      };
 
-
-      window.imagePicker.getPictures(
-        function (results) {
+      $cordovaImagePicker.getPictures(options)
+        .then(function (results) {
           for (var i = 0; i < results.length; i++) {
             console.log('Image URI: ' + results[i]);
           }
         }, function (error) {
-        console.log('Error: ' + error);
-      }, {
-        maximumImagesCount: 10,
-        width: 800
-      }
-      );
+          // error getting photos
+        });
+
+
+//      window.imagePicker.getPictures(
+//        function (results) {
+//          for (var i = 0; i < results.length; i++) {
+//            console.log('Image URI: ' + results[i]);
+//          }
+//        }, function (error) {
+//        console.log('Error: ' + error);
+//      }, {
+//        maximumImagesCount: 10,
+//        width: 800
+//      }
+//      );
+
     };
 
 
